@@ -8,7 +8,10 @@
 	<div class="grid-container">
 		<header class="header">
 			<div class="brand">
-				<a href="index.html">BuzzKart</a>
+				<BUTTON style="outline-width: 0;" onClick="openMenu()">
+					&#9776;
+				</BUTTON>
+				<a href="index.html">buzzkart</a>
 			</div>
 			<div class="header-links">
 				<a href="cart.html">Cart</a>
@@ -17,8 +20,13 @@
 			</div>
 
 		</header>
-		<aside>
-			Shopping Categories
+		<aside class="sidebar">
+			<h3>Shopping Categories</h3>
+				<BUTTON class="sidebar-close-button"onClick="closeMenu()">X</BUTTON>
+				<ul>
+					<li><a href="index.html">Pants</a></li>
+					<li><a href="index.html">Shirts</a></li>
+				</ul>
 		</aside>
 		<main class="main">
 			<div class="content">
@@ -90,6 +98,16 @@
 		</main>
 		<footer class="footer">All Rights Reserved.</footer>
 	</div>
+	<script>
+		function openMenu()
+		{
+			document.querySelector(".sidebar").classList.add("open");
+		}
+		function closeMenu()
+		{
+			document.querySelector(".sidebar").classList.remove("open");
+		}
+	</script>
 
 </body>
 </html>
