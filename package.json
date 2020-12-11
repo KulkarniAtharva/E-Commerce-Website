@@ -1,0 +1,30 @@
+{
+  "name": "e-commerce-website",
+  "version": "1.0.0",
+  "description": "- HTML5 and CSS3: Semantic Elements, CSS Grid, Flexbox\r - React: Components, Props, Events, Hooks, Router, Axios\r - Redux: Store, Reducers, Actions\r - Node & Express: Web API, Body Parser, File Upload, JWT\r - MongoDB: Mongoose, Aggregation\r - Development: ESLint, Babel, Git, Github,\r - Deployment: Heroku",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon --watch backend --exec babel-node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KulkarniAtharva/E-Commerce-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KulkarniAtharva/E-Commerce-Website/issues"
+  },
+  "homepage": "https://github.com/KulkarniAtharva/E-Commerce-Website#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "nodemon": "^2.0.6"
+  }
+  
+}

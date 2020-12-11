@@ -1,14 +1,14 @@
 import logo from './logo.svg';
-import data from './data';
 import './App.css';
-import HomeScreen from './Screens/HomeScreen';
-import ProductScreen from './Screens/ProductScreen';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 
 function App() 
 {
-  const openMenu = () => {
+  const openMenu = () =>
+  {
     document.querySelector(".sidebar").classList.add("open");
   }
   const closeMenu = () => {
@@ -23,7 +23,7 @@ function App()
           <button className="hamburger-icon" onClick={openMenu}>
             &#9776;
         </button>
-          <Link to="/">buzzkart</Link>
+          <Link className="brand-name" to="/">buzzkart</Link>
         </div>
         <div className="header-links">
           <a href="cart.html">Cart</a>

@@ -34,8 +34,8 @@ function ProductScreen (props)
 
 					</li>
 				</ul>	
-			</div>
-			<div className="details-action">
+			 </div>
+			 <div className="details-action">
 				<ul>
 					<li>
 						Price: {product.price}
@@ -52,7 +52,7 @@ function ProductScreen (props)
 							</select>
 					</li>
 					<li>
-						<button>Add to Cart</button>
+						<button className="button primary">Add to Cart</button>
 					</li>
 				</ul>
 			</div>

@@ -29,6 +29,10 @@ body
 	font-weight: bold;
 	text-decoration: none;
 }
+.brand .brand-name:hover
+{
+	color: #f8e831;
+}
 .header
 {
 	grid-area: header;
@@ -43,6 +47,7 @@ body
 {
 	color: #ffffff;
 	text-decoration: none;
+	padding: 1rem;
 }
 .header-links a:hover
 {
@@ -173,7 +178,7 @@ a:hover
 /*** Product details  ***/
 .details
 {
-	display: flex;
+	display:flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-wrap: wrap;
@@ -183,6 +188,7 @@ a:hover
 .details-image
 {
 	flex: 2 1 60rem;
+
 }
 
 .details-info
@@ -192,7 +198,8 @@ a:hover
 
 .details-action
 {
-	flex: 1 1 60rem;
+	flex: 1 1 30rem;
+
 }
 
 .details-image img
@@ -228,4 +235,25 @@ a:hover
 .hamburger-icon
 {
 	outline-width: 0;
+}
+.details-action ul li:last-child
+{
+	display: flex;
+	flex-direction: column;
+}
+.button
+{
+	padding:1rem;
+	border: 0.1rem #808080 solid;
+	cursor: pointer;
+	border-radius: 0.5rem;
+
+}
+.button:hover
+{
+	border:0.1rem #404040 solid;
+}
+.button.primary 
+{
+	background-color: #f8e831;
 }
