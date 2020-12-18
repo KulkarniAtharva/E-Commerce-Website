@@ -3,16 +3,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { signin } from '../actions/userActions';
+import { register } from '../actions/userActions';
 
 
 
-function SigninScreen(props) {
+function RegisterScreen(props) {
 
+    const [name,setName] = useState('');
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
-    const userSignin = useSelector(state=>state.userSignin || {});
-    const { loading , userInfo, error } = userSignin;
+    const [rePassword,setRePassword] = useState('');
+    const userRegister = useSelector(state=>state.userRegister || {});
+    const { loading , userInfo, error } = userRegister;
  
   const dispatch = useDispatch();
 
@@ -31,17 +33,25 @@ function SigninScreen(props) {
  const submitHandler = (e) =>
  {
      e.preventDefault();
-     dispatch(signin(email,password));
+     dispatch(register(name,email,password));
  }
   return <div className="form">
       <form onSubmit={submitHandler}>
           <ul className="form-container">
               <li>
-                  <h2>Sign In</h2>
+                  <h2>Create Account</h2>
               </li>
               <li>
                   {loading && <div>Loading...</div>}
                   {error && <div>{error}</div>}
+              </li>
+              <li>
+                  <label htmlFor="name">
+                      Name
+                  </label>
+                  <input type="name" name="name" id="name" onChange={(e) => setName(e.target.value)}>
+
+                  </input>
               </li>
               <li>
                   <label htmlFor="email">
@@ -56,16 +66,20 @@ function SigninScreen(props) {
                   <input type="password" id="password" name="password" onChange={(e)=> setPassword(e.target.value)}></input>
               </li>
               <li>
-              <button type="Submit" className="button primary">Signin</button>
-
+                  <label htmlFor="rePassword">Re-enter Password</label>
+                  <input type="password" id="rePassword" name="rePassword" onChange={(e)=> setRePassword(e.target.value)}></input>
               </li>
               <li>
-                  New to shopit?
+              <button type="Submit" className="button primary">Register</button>
+
+              </li>
+              
+              <li>
+                  Already have an account?
+                  <Link to="/signin">Signin</Link>
               </li>
 
-              <li>
-                  <Link to="/register" className="button secondary text-centre" id="signup">Create account</Link>
-              </li>
+    
               
           </ul>
       </form>
@@ -73,4 +87,4 @@ function SigninScreen(props) {
 
   </div>
 }
-export default SigninScreen;
+export default RegisterScreen;
